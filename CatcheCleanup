@@ -1,0 +1,15 @@
+Post deployment tasks to be executed
+
+1) Execute below reports
+
+ON PER – Following T-Code
+/IWBEP/CACHE_CLEANUP 
+
+ON TGP – Following Reports using (se38)                                                                                                                                
+/UI5/APP_INDEX_CALCULATE                                                                                                   
+/UI5/UPDATE_CACHEBUSTER 
+
+On TGP – following T-Code
+/n/IWFND/CACHE_CLEANUP
+
+2) Activate the service in SICF
