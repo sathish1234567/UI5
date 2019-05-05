@@ -9,3 +9,13 @@ compulsory follow with first tag
 .....
 .....
 </core:fragementDefinition>
+
+for I18N:
+save filename with <fielname>.properties
+Ex:webapp/i18n/i18n.properties (New)
+
+showHelloButtonText=Say Hello
+helloMsg=Hello {0}
+
+For multltiple languages
+for example i18n_de.properties for German, i18n_en.properties for English, 
