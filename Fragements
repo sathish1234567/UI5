@@ -1,4 +1,11 @@
 Fragemetns:
 Used to reuseable component
 Every view have one controller is avaiable, in fragement no controller available we can use it as same controller of the view for actions.
-Fragement file extension should: <file name>.fragement.xml
+Fragement file extension should: <file name>.fragement.xml , this file should be available under the webcontent folder.
+
+fragement.xml: view
+compulsory follow with first tag
+<core:fragementDefinition .... >
+.....
+.....
+</core:fragementDefinition>
