@@ -1,0 +1,5 @@
+Filter:
+/sap/opu/odata/sap/ZGW_PRODUCT_SRV/Products?$filter=Price ge 4999 and SupplierName ge ‘T’ and ProductID ge ‘HT’
+/sap/opu/odata/sap/ZGW_PRODUCT_SRV/Products?$skip=10&$top=3&$select=ProductID
+
+
