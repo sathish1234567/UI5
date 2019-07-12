@@ -5,9 +5,20 @@ Filter:
 /sap/opu/odata/sap/ZGW_PRODUCT_SRV/Products?$filter=Price ge 4999 and SupplierName ge ‘T’ and ProductID ge ‘HT’
 /sap/opu/odata/sap/ZGW_PRODUCT_SRV/Products?$skip=10&$top=3&$select=ProductID
 
-Entity:
+Entity:(get)
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)/SOItems --> corresponding item case
+
+EntitySet(Get)
+/sap/opu/odata/SAP/ZIBMODATA_SRV/SCUSTSet?$format=json&$filter=Postcode eq '12345'
+/sap/opu/odata/SAP/ZIBMODATA_SRV/SCUSTSet?$format=json&$filter=Name eq 'King' and Country eq 'GB'&$select=Name,City
+/sap/opu/odata/SAP/ZIBMODATA_SRV/SCUSTSet?$format=json&$filter=Country eq 'GB'&$select=Name,City&$orderby=City desc
+/sap/opu/odata/SAP/ZIBMODATA_SRV/SCUSTSet?$format=json&$filter=Country eq 'GB'&$select=Name,Id&$orderby=Id&$top=3
+/sap/opu/odata/SAP/ZIBMODATA_SRV/SCUSTSet/$count?$filter=Country eq 'DE'
+
+POST:
+/sap/opu/odata/SAP/ZIBMODATA_SRV/SCUSTSet
+payload:
 
 ExpandEntity(Single Sales Order Corresponding Items)/iwbep/if_mgw_appl_srv_runtime~get_expanded_entity.
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)?$expand=SOItems
