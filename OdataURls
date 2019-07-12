@@ -9,8 +9,10 @@ Entity:
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)/SOItems --> corresponding item case
 
-ExpandEntity(Single Sales Order Corresponding Items)
+ExpandEntity(Single Sales Order Corresponding Items)/iwbep/if_mgw_appl_srv_runtime~get_expanded_entity.
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)?$expand=SOItems
 
 ExpandEntitySet(Each sales order --> corresponding items)
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders?$expand=SOItems
+ /sap/opu/odata/sap/ZPROJ_982_SRV/HeaderSet?$filter=PoNumber eq ‘4500000163’&$expand=NavItem
+ /sap/opu/odata/sap/ZPROJ_982_SRV/HeaderSet?$filter=PoNumber eq ‘4500000163’&$expand=NavItem,NavSchedule
