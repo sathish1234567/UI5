@@ -1,0 +1,39 @@
+From Open SAP
+1. While devloping web applications sap is recommending to use the chrome.
+2. To open developer Tools : Press F12/ right click on app--> select inspect from drop down(CTRL+SHIFT+I)
+3. Different Menu options are available in Developer Tools
+   1. Elements  - Contains the DOM Structure
+   2. Console   - Somethig going wrong in your application it is reflecting to console tab
+   3. Sources   - Contains our code, after load --> ctrl+o to search particular file
+   4. Networks  - Which Files are loaded
+   
+4. Technical Information Dialog:ctrl+alt+shift+p --> to open the SAP ui5 debug screen --> activate the debug, sap ui5 versions
+5. Diagnostic Window: ctrl+alt+shift+s --> SAP ui5 control tree,views, and change control properties and bindings
+6.   |_ javascript trace, control tree**(Change the property values in Dynamically in debugging mode), debugging, Interaction, Performance...
+7.   |_ Control tree contains - properties, binding info, Break Points, Export. --> so we can change in debugging mode
+8. UI5 Inspector:- is the extension of google chrome.
+9.   |_ From developer tools F12
+10.  |_ you can add extension from google chrome play store --> UI5 Inspector (Search box) --> Add to chrome -->Add extension
+     
+ Useful methods for UI5 debugging:
+ 1. retriving the cotrol in the console --> sap.ui.getCore().byId("ur Id");
+        Your control var = sap.ui.getCore().ById("Ur Id");
+        your control var = $($0).control(0);(If the respective DOM elt is selected in the elements tab)
+        Ex: listItem = sap.ui.getCore().byId("Lid2");
+ 2. Getting infirmation about control.
+                      |_ getParent();      
+      controllerName. -|_ getMetadata();
+      
+      Ex:
+      
+            listItem.getMetadata();       ==> returns useful to check the class details.
+            listItem.getParent();         ==> returns the parent control in the control tree.
+            listItem.                     ==> to shows you all available methods in the console.
+            
+            listItem.(get/Set)Title()           ==> to ge the title of the 
+                      |_ Each propery have a bind with 2 methods setter/Getter methods
+            console to get the parent    
+            list = listItem.getParent();
+            list.getMetadata();           ==> to get the parent of listItem is sap.m.List
+        
+        
