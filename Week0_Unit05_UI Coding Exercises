@@ -15,8 +15,8 @@
 Ans. in WEBIde --> goto the FILE --> GIT --> CLONE REPOSITORY
                                               |_ in clone repository popup provide below information
                                               
-                                              Ex:
-                                              url:  https://github.com/michadelic/test_ui51
+                                              Ex: https://github.com/Michadelic/test_ui51
+                                              url:   https://github.com/Michadelic/test_ui51/(https://github.com/michadelic/test_ui51)
                                               host: github.com
                                               repository path: /michadelic/test_ui51
                                               protocol: https
