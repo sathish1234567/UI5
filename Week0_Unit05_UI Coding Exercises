@@ -1,0 +1,46 @@
+ 1. How to run the UI5 project from WEB app?
+ Ans : Goto WEBAPP from your project
+              |_ select the index.html file --> click on execute button
+              
+ 2. How to use the external JS file?
+ Ans. using script tag we can use the external file in index.html.
+ 
+ index.html
+  |_ <script src="https://michadelic.github.io/test_ui51/validator/validator.js"></script>  -> used for validate your units at here only
+              
+              
+3. How to get the file from github repository/git clone?
+   or
+   What is the use of git-->clone repository?
+Ans. in WEBIde --> goto the FILE --> GIT --> CLONE REPOSITORY
+                                              |_ in clone repository popup provide below information
+                                              
+                                              Ex:
+                                              url:  https://github.com/michadelic/test_ui51
+                                              host: github.com
+                                              repository path: /michadelic/test_ui51
+                                              protocol: https
+                                              
+                                              click on ok
+                                              now repository cloned into the different project in webide.
+                                          workspace
+                                            |_test_ui51 (folder)
+                                              |_w1u1
+                                                |_webapp
+                                              |_w1u2
+                                                |_webapp
+                                              |_w1u3
+                                                |_webapp
+                                              |_w1u4
+                                                |_webapp
+                                                
+                                          then execute the each project
+                                          
+                                          How to use this files in your project?
+                                          Ans. in your project
+                                                |_ delete web app folder
+                                                |_ copy the web app folder from cloned project (test_ui51-->w1u1-->webapp)
+                                                |_ goto your project
+                                                |_ paste the web app folder.
+                                                |_ now execute the your project
+                                                
