@@ -22,6 +22,7 @@ payload:
 
 ExpandEntity(Single Sales Order Corresponding Items)/iwbep/if_mgw_appl_srv_runtime~get_expanded_entity.
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)?$expand=SOItems
+/sap/opu/odata/sap/Z_FIORI_FSE_SRV/PerfHeaderSet(Id='683387767')?$expand=GT15,BT11TO15,BT05TO10,UPTO04,HEADITEM
 
 muliple navigation:
 CONSTANTS: lc_gt15 TYPE string VALUE 'GT15',
