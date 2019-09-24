@@ -1,0 +1,24 @@
+SAPUI5 is searching for resources like views, controllers or other classes by their full names.
+
+It is assuming that every namespace part is a folder and the class/view name is the filename. If its a view the filename has to be xxx.view.xml. if its a controller the filename has to be xxx.controller.js.
+
+The root folder where it starts its search is by default the folder of the sap-ui-core.js.
+
+You can change the root folder by defining a data-sap-ui-resourceroots mapping. Its a javascript object that maps a namespace to a path (relative to the index.html).
+
+With the following bootstrap tag company.myProject.view.View1 is searched for at /resources/company/myProject/view/View1.view.xml:
+
+<script id="sap-ui-bootstrap" 
+    src="resources/sap-ui-core.js"></script>
+With this bootstrap tag company.myProject.View1 is searched for at /view/View1.view.xml:
+
+<script id="sap-ui-bootstrap" 
+    src="resources/sap-ui-core.js"
+    data-sap-ui-resourceroots='{
+      "company.myProject": "./" }'></script>
+And with this bootstrap tag company.myProject.View1 is searched for at ddd/myProject/view/View1.view.xml:
+
+<script id="sap-ui-bootstrap" 
+    src="resources/sap-ui-core.js"
+    data-sap-ui-resourceroots='{
+      "company": "./ddd" }'></script>
