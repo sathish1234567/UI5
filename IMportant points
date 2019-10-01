@@ -1,0 +1,87 @@
+
+***************************************************************************************************
+                  xml/json
+CLIENT  < -----------  -------------> SERVER
+
+
+
+1. right now receving the json format only between the client amd server communication.
+
+
+2. sending payload client  ------------------> server
+    |_ taking payload into variable (i.e string format)
+    |_ json.stringfy(payload) --> now converting string to json(object)
+    
+3. resposnse getting from server is in the form of string.
+    |_ json.parse(response) ----> string is converting to json format.
+    
+*******************************************************************************************************
+
+http methods: we can get the data from server with the help of http methods as get/post/delete/put/patch/merge
+*****************************************************************************************************
+
+json: 
+
+JSON:
+JSON: JavaScript Object Notation.
+JSON is a syntax for storing and exchanging data.
+JSON is text, written with JavaScript object notation
+
+
+Sending Data:
+If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:
+
+Example
+var myObj = {name: "John", age: 31, city: "New York"};
+var myJSON = JSON.stringify(myObj);
+
+
+Receiving Data
+If you receive data in JSON format, you can convert it into a JavaScript object:
+
+Example:
+var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+var myObj = JSON.parse(myJSON);
+console.log(myObj.name);
+
+**********************************************************************************************
+ODATA Methods               UI5 methods
+_____________               ____________
+POST                        create
+get                         read
+put                         update
+delete                      remove
+fileupload                  attach
+filedownload                read
+filedelete                   
+
+******************************************************************************************************
+how to get the data through url in ui5?
+
+1.  assign the odata url in service url of component.js file
+
+    "config" : {
+      resourceBundle : "",
+      serviceConfig : {
+        name: "",
+      //  serviceUrl : "/sap/opu/odata/sap/Z_FIORI_PI_P91_SRV/",
+        serviceUrl : "../PhysicalInventory_91/proxy/sap/opu/odata/sap/Z_FIORI_PI_P91_SRV?saml2=disabled",
+      }
+    },
+    
+    
+    
+  
+    
+
+
+
+ 
+
+
+
+
+    
+    
+    
+    
