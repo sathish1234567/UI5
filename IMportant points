@@ -55,6 +55,15 @@ fileupload                  attach
 filedownload                read
 filedelete                   
 
+
+Clearing the data in master data :
+_________________________________
+
+this.oInitialLoadFinishedDeferred = jQuery.Deferred();
+this.getOwnerComponent().getEventBus().subscribe("PhysicalInventory_91", "PhysicalRefresh", this._handleActionCallBack, this);
+
+
+
 ******************************************************************************************************
 how to get the data through url in ui5?
 
