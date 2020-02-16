@@ -24,6 +24,12 @@ ExpandEntity(Single Sales Order Corresponding Items)/iwbep/if_mgw_appl_srv_runti
 http://<GWHost>:<port>/sap/opu/odata/sap/SALESORDERXX/SOHeaders(0000004969)?$expand=SOItems
 /sap/opu/odata/sap/Z_FIORI_FSE_SRV/PerfHeaderSet(Id='683387767')?$expand=GT15,BT11TO15,BT05TO10,UPTO04,HEADITEM
 
+URLS:https://services.odata.org/OData/OData.svc/Categories?$select=Name,Products&$expand=Products/Suppliers
+URLS:/sap/opu/odata/sap/zsop_inventory_srv/INVENTORY_SUMMARYSet(Gtin='5020657110452',Site='1007')?sap-client=201&$expand=TO_LOCATION&$select=Article,Gtin,TO_LOCATION/Article,TO_LOCATION/Gtin.....
+URLS:https://services.odata.org/OData/OData.svc/Categories?$expand=Products&$select=Products/Name,Products/ID&$format=json
+Ex:{"odata.metadata":"https://services.odata.org/OData/OData.svc/$metadata#Categories&$select=Products/Name,Products/ID","value":[{"Products":[{"ID":0,"Name":"Bread"},{"ID":1,"Name":"Milk"}]},{"Products":[{"ID":1,"Name":"Milk"},{"ID":2,"Name":"Vint soda"},{"ID":3,"Name":"Havina Cola"},{"ID":4,"Name":"Fruit Punch"},{"ID":5,"Name":"Cranberry Juice"},{"ID":6,"Name":"Pink Lemonade"},{"odata.type":"ODataDemo.FeaturedProduct","ID":9,"Name":"Lemonade"},{"odata.type":"ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee"}]},{"Products":[{"ID":7,"Name":"DVD Player"},{"ID":8,"Name":"LCD HDTV"}]}]}
+
+
 muliple navigation:
 CONSTANTS: lc_gt15 TYPE string VALUE 'GT15',
              lc_bt11to15 TYPE string VALUE 'BT11TO15',
